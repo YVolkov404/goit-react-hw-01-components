@@ -32,9 +32,11 @@ const TableBody = ({ items }) => {
 
 export const TransactionHistory = ({ items }) => {
   return (
-    <table className="transaction-history">
-      <TableHead />
-      <TableBody items={items} />
-    </table>
+    <div>
+      <table className="transaction-history">
+        <TableHead />
+        <TableBody items={items} />
+      </table>
+    </div>
   );
 };

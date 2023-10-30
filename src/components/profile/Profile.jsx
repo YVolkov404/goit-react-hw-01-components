@@ -1,4 +1,16 @@
-import { MdOutlineAlternateEmail } from 'react-icons/md';
+import {
+  ProfileContent,
+  ProfileDescr,
+  ProfileImg,
+  ProfileName,
+  ProfileTag,
+  TagAtIcon,
+  ProfileLocation,
+  StatsList,
+  ListItem,
+  ItemLabel,
+  ItemQuantity,
+} from './Profile.styled';
 
 export const Profile = ({
   user: {
@@ -10,30 +22,30 @@ export const Profile = ({
   },
 }) => {
   return (
-    <div className="profile">
-      <div className="description">
-        <img className="avatar" src={avatar} alt="User avatar" width="120" />
-        <p className="name">{username}</p>
-        <p className="tag">
-          <MdOutlineAlternateEmail />
+    <ProfileContent>
+      <ProfileDescr>
+        <ProfileImg src={avatar} alt="User avatar" />
+        <ProfileName>{username}</ProfileName>
+        <ProfileTag>
+          <TagAtIcon />
           {tag}
-        </p>
-        <p className="location">{location}</p>
-      </div>
-      <ul className="stats">
-        <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{followers}</span>
-        </li>
-        <li>
-          <span className="label">Views</span>
-          <span className="quantity">{views}</span>
-        </li>
-        <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{likes}</span>
-        </li>
-      </ul>
-    </div>
+        </ProfileTag>
+        <ProfileLocation>{location}</ProfileLocation>
+      </ProfileDescr>
+      <StatsList>
+        <ListItem>
+          <ItemLabel>Followers</ItemLabel>
+          <ItemQuantity>{followers}</ItemQuantity>
+        </ListItem>
+        <ListItem>
+          <ItemLabel>Views</ItemLabel>
+          <ItemQuantity>{views}</ItemQuantity>
+        </ListItem>
+        <ListItem>
+          <ItemLabel>Likes</ItemLabel>
+          <ItemQuantity>{likes}</ItemQuantity>
+        </ListItem>
+      </StatsList>
+    </ProfileContent>
   );
 };

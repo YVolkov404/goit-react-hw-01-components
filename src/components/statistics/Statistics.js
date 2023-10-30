@@ -28,9 +28,11 @@ const StatList = ({ stats }) => {
 
 export const Statistics = ({ title, stats }) => {
   return (
-    <section className="statistics">
-      <StatListTitle title={title} />
-      <StatList stats={stats} />
-    </section>
+    <div>
+      <section className="statistics">
+        <StatListTitle title={title} />
+        <StatList stats={stats} />
+      </section>
+    </div>
   );
 };
