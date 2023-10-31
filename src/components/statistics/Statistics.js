@@ -1,38 +1,47 @@
-import { MdOutlinePercent } from 'react-icons/md';
+import {
+  StatisticsWrapper,
+  StatisticsSection,
+  ListTitle,
+  List,
+  ListEl,
+  ElLabel,
+  ElPercentage,
+  PercentageIcon,
+} from './Statistics.styled';
 
 const StatListTitle = ({ title }) => {
-  return <h2 className="title">{title}</h2>;
+  return <ListTitle>{title}</ListTitle>;
 };
 
 const StatListEl = ({ stats: { label, percentage } }) => {
   return (
-    <li className="item">
-      <span className="label">{label}</span>
-      <span className="percentage">
+    <ListEl>
+      <ElLabel>{label}</ElLabel>
+      <ElPercentage>
         {percentage}
-        <MdOutlinePercent />
-      </span>
-    </li>
+        <PercentageIcon />
+      </ElPercentage>
+    </ListEl>
   );
 };
 
 const StatList = ({ stats }) => {
   return (
-    <ul className="stat-list">
+    <List>
       {stats.map(data => {
         return <StatListEl key={data.id} stats={data} />;
       })}
-    </ul>
+    </List>
   );
 };
 
 export const Statistics = ({ title, stats }) => {
   return (
-    <div>
-      <section className="statistics">
+    <StatisticsWrapper>
+      <StatisticsSection>
         <StatListTitle title={title} />
         <StatList stats={stats} />
-      </section>
-    </div>
+      </StatisticsSection>
+    </StatisticsWrapper>
   );
 };
