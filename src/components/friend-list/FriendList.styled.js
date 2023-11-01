@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { MdCircle } from 'react-icons/md';
 
-const isOnlineStatusColor = isOnline => {
-  switch (isOnline.children[0]) {
+const isOnlineStatusColor = p => {
+  switch (p.$isOnline) {
     case true:
       return '#5d9c59';
     case false:

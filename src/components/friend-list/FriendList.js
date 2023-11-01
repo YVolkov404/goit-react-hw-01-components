@@ -11,7 +11,7 @@ import {
 const FriendListItem = ({ friends: { avatar, name, isOnline } }) => {
   return (
     <ListItem>
-      <ItemStatus>
+      <ItemStatus $isOnline={isOnline}>
         {isOnline} <CircleIcon size="24px" />
       </ItemStatus>
       <ItemImg src={avatar} alt="User avatar" width="68" />
