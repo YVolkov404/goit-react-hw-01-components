@@ -3,7 +3,6 @@ import { MdOutlineAlternateEmail } from 'react-icons/md';
 
 export const ProfileContent = styled.div`
   width: 300px;
-  margin-bottom: 30px;
   border-radius: 7px;
   box-shadow: 0px 0px 3px 0px rgba(4, 54, 74, 0.74);
   overflow: hidden;

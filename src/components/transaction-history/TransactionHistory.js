@@ -1,42 +1,52 @@
+import {
+  TransactionHistoryContainer,
+  TableWrap,
+  TableBodyWrap,
+  TableHeadWrap,
+  TableHeader,
+  TableRow,
+  TableData,
+} from './TransactionHistory.styled';
+
 const TableHead = () => {
   return (
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Amount</th>
-        <th>Currency</th>
-      </tr>
-    </thead>
+    <TableHeadWrap>
+      <TableRow>
+        <TableHeader>Type</TableHeader>
+        <TableHeader>Amount</TableHeader>
+        <TableHeader>Currency</TableHeader>
+      </TableRow>
+    </TableHeadWrap>
   );
 };
 
 const TableRowItem = ({ items: { type, amount, currency } }) => {
   return (
-    <tr>
-      <td>{type}</td>
-      <td>{amount}</td>
-      <td>{currency}</td>
-    </tr>
+    <TableRow>
+      <TableData>{type}</TableData>
+      <TableData>{amount}</TableData>
+      <TableData>{currency}</TableData>
+    </TableRow>
   );
 };
 
 const TableBody = ({ items }) => {
   return (
-    <tbody>
+    <TableBodyWrap>
       {items.map(transaction => {
         return <TableRowItem key={transaction.id} items={transaction} />;
       })}
-    </tbody>
+    </TableBodyWrap>
   );
 };
 
 export const TransactionHistory = ({ items }) => {
   return (
-    <div>
-      <table className="transaction-history">
+    <TransactionHistoryContainer>
+      <TableWrap>
         <TableHead />
         <TableBody items={items} />
-      </table>
-    </div>
+      </TableWrap>
+    </TransactionHistoryContainer>
   );
 };

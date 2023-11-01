@@ -7,15 +7,15 @@ import { Statistics } from './statistics/Statistics';
 import { FriendList } from './friend-list/FriendList';
 import { TransactionHistory } from './transaction-history/TransactionHistory';
 
-import { AppContainer } from './App.styled';
+import { AppContainer, SubContainer } from './App.styled';
 
 export const App = () => {
   return (
     <AppContainer>
-      <div>
+      <SubContainer>
         <Profile user={user} />
         <Statistics title="Upload stats" stats={data} />
-      </div>
+      </SubContainer>
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} />
     </AppContainer>

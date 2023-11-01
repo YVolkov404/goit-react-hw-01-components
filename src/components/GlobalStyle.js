@@ -16,7 +16,9 @@ export const GlobalStyle = createGlobalStyle`
       monospace;
   }
 
+  h1,
   h2,
+  h3,
   p,
   ul {
     margin: 0;
@@ -30,5 +32,17 @@ export const GlobalStyle = createGlobalStyle`
 
   ul {
     list-style: none;
+  }
+
+  table, caption, tbody, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
   }
 `;
