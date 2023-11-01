@@ -31,13 +31,14 @@ export const ListTitle = styled.h2`
 export const List = styled.ul`
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 `;
 
 export const ListEl = styled.li`
   display: flex;
   flex-direction: column;
   gap: 5px;
-  width: calc((100% - 4px) / 4);
+  width: calc(100% / 5);
   text-align: center;
   padding: 10px 0;
   background-color: ${getRandomHexColor};

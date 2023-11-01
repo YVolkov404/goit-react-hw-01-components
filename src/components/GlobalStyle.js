@@ -20,7 +20,8 @@ export const GlobalStyle = createGlobalStyle`
   h2,
   h3,
   p,
-  ul {
+  ul,
+  li {
     margin: 0;
     padding: 0;
   }
