@@ -1,6 +1,16 @@
 import styled from 'styled-components';
 import { MdCircle } from 'react-icons/md';
 
+const isOnlineStatusColor = isOnline => {
+  switch (isOnline.children[0]) {
+    case true:
+      return '#5d9c59';
+    case false:
+      return '#df2e38';
+    default:
+  }
+};
+
 export const FriendListWrapper = styled.div`
   height: 545px;
   margin-bottom: 30px;
@@ -27,15 +37,7 @@ export const ListItem = styled.li`
 
 export const ItemStatus = styled.span`
   margin: 0 15px;
-  color: ${isOnline => {
-    switch (isOnline.children[0]) {
-      case true:
-        return '#5d9c59';
-      case false:
-        return '#df2e38';
-      default:
-    }
-  }};
+  color: ${isOnlineStatusColor};
 `;
 
 export const ItemImg = styled.img`
