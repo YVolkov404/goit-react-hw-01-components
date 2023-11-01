@@ -1,21 +1,33 @@
+import {
+  FriendListWrapper,
+  List,
+  ListItem,
+  ItemStatus,
+  ItemImg,
+  ItemText,
+  CircleIcon,
+} from './FriendList.styled';
+
 const FriendListItem = ({ friends: { avatar, name, isOnline } }) => {
   return (
-    <li className="item">
-      <span className="status">{isOnline}</span>
-      <img className="avatar" src={avatar} alt="User avatar" width="48" />
-      <p className="name">{name}</p>
-    </li>
+    <ListItem>
+      <ItemStatus>
+        {isOnline} <CircleIcon size="24px" />
+      </ItemStatus>
+      <ItemImg src={avatar} alt="User avatar" width="68" />
+      <ItemText>{name}</ItemText>
+    </ListItem>
   );
 };
 
 export const FriendList = ({ friends }) => {
   return (
-    <div>
-      <ul className="friend-list">
+    <FriendListWrapper>
+      <List>
         {friends.map(friend => {
           return <FriendListItem key={friend.id} friends={friend} />;
         })}
-      </ul>
-    </div>
+      </List>
+    </FriendListWrapper>
   );
 };

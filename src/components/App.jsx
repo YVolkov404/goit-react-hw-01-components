@@ -7,13 +7,17 @@ import { Statistics } from './statistics/Statistics';
 import { FriendList } from './friend-list/FriendList';
 import { TransactionHistory } from './transaction-history/TransactionHistory';
 
+import { AppContainer } from './App.styled';
+
 export const App = () => {
   return (
-    <div>
-      <Profile user={user} />
-      <Statistics title="Upload stats" stats={data} />
+    <AppContainer>
+      <div>
+        <Profile user={user} />
+        <Statistics title="Upload stats" stats={data} />
+      </div>
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} />
-    </div>
+    </AppContainer>
   );
 };

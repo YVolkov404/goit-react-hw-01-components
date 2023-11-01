@@ -31,9 +31,4 @@ export const GlobalStyle = createGlobalStyle`
   ul {
     list-style: none;
   }
-
-  #root>div {
-    margin-top: 5%;
-    margin-left: 5%;
-  }
 `;
