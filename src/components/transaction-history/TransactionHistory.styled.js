@@ -20,7 +20,7 @@ export const TableBodyWrap = styled.tbody`
 `;
 
 export const TableHeadWrap = styled.thead`
-  background-color: #64ccc5;
+  background-color: ${p => p.theme.colors.tealSea};
 `;
 
 export const TableHeader = styled.th`
@@ -30,7 +30,7 @@ export const TableHeader = styled.th`
   letter-spacing: 0.03em;
   padding: 15px 0;
   font-variant: all-small-caps;
-  color: #176b87;
+  color: ${p => p.theme.colors.navyBlue};
   border-right: 1px solid #dafffb;
   &:last-child {
     border-right: none;
@@ -38,10 +38,10 @@ export const TableHeader = styled.th`
 `;
 
 export const TableRow = styled.tr`
-  color: #176b87;
+  color: ${p => p.theme.colors.navyBlue};
   &:nth-child(2n) {
-    color: #64ccc5;
-    background-color: #dafffb;
+    color: ${p => p.theme.colors.tealSea};
+    background-color: ${p => p.theme.colors.coldMint};
   }
 `;
 

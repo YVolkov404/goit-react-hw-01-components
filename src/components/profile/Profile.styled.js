@@ -22,14 +22,14 @@ export const ProfileImg = styled.img`
   padding: 10px;
   border: 2px solid #176b87;
   border-radius: 50%;
-  background-color: #dafffb;
+  background-color: ${p => p.theme.colors.coldMint};
 `;
 
 export const ProfileName = styled.p`
   font-size: 24px;
   font-weight: 700;
   text-align: center;
-  color: #04364a;
+  color: ${p => p.theme.colors.darkNavy};
 `;
 
 export const ProfileTag = styled.p`
@@ -37,25 +37,25 @@ export const ProfileTag = styled.p`
   line-height: 1.2;
   text-decoration: underline;
   text-align: center;
-  color: #64ccc5;
+  color: ${p => p.theme.colors.tealSea};
 `;
 
 export const TagAtIcon = styled(MdOutlineAlternateEmail)`
-  fill: #176b87;
+  fill: ${p => p.theme.colors.navyBlue};
   vertical-align: bottom;
 `;
 
 export const ProfileLocation = styled.p`
   font-size: 18px;
   text-align: center;
-  color: #64ccc5;
+  color: ${p => p.theme.colors.tealSea};
 `;
 
 export const StatsList = styled.ul`
   display: flex;
   flex-direction: row;
-  color: #dafffb;
-  background-color: #64ccc5;
+  color: ${p => p.theme.colors.coldMint};
+  background-color: ${p => p.theme.colors.tealSea};
 `;
 
 export const ListItem = styled.li`
@@ -74,7 +74,7 @@ export const ItemLabel = styled.span`
   font-variant: all-small-caps;
   letter-spacing: 0.03em;
   text-align: center;
-  color: #176b87;
+  color: ${p => p.theme.colors.navyBlue};
 `;
 
 export const ItemQuantity = styled.span`

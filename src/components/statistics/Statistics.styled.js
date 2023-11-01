@@ -24,7 +24,7 @@ export const ListTitle = styled.h2`
   font-size: 24px;
   font-weight: 700;
   text-align: center;
-  color: #04364a;
+  color: ${p => p.theme.colors.darkNavy};
   border-bottom: 2px solid #176b87;
 `;
 
@@ -50,15 +50,15 @@ export const ListEl = styled.li`
 export const ElLabel = styled.span`
   font-size: 14px;
   letter-spacing: 0.03em;
-  color: #dafffb;
+  color: ${p => p.theme.colors.coldMint};
 `;
 
 export const ElPercentage = styled.span`
   font-size: 15px;
-  color: #dafffb;
+  color: ${p => p.theme.colors.coldMint};
 `;
 
 export const PercentageIcon = styled(MdOutlinePercent)`
-  fill: #dafffb;
+  fill: ${p => p.theme.colors.coldMint};
   vertical-align: bottom;
 `;

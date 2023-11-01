@@ -41,7 +41,7 @@ export const ItemStatus = styled.span`
 export const ItemImg = styled.img`
   padding: 5px;
   border: 2px solid #176b87;
-  background-color: #dafffb;
+  background-color: ${p => p.theme.colors.coldMint};
   border-radius: 5px;
   margin-right: 20px;
 `;
@@ -49,7 +49,7 @@ export const ItemImg = styled.img`
 export const ItemText = styled.p`
   font-size: 24px;
   font-weight: 700;
-  color: #04364a;
+  color: ${p => p.theme.colors.darkNavy};
 `;
 
 export const CircleIcon = styled(MdCircle)`
