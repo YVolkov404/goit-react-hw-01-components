@@ -13,7 +13,7 @@ export const Statistics = ({ title, stats }) => {
   return (
     <Container>
       <Section>
-        <Title>{title}</Title>
+        {title && <Title>{title}</Title>}
         <List>
           {stats.map(({ id, label, percentage }) => {
             return (

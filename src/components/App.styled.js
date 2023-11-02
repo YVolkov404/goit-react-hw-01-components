@@ -11,9 +11,9 @@ export const AppContainer = styled.div`
 `;
 
 export const SubContainer = styled.div`
-  height: 545px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 30px;
+  gap: 10px;
 `;

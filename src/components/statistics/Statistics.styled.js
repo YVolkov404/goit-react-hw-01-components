@@ -9,7 +9,7 @@ const getRandomHexColor = () => {
 
 export const Container = styled.div`
   width: 300px;
-  border-radius: 0 0 5px 5px;
+  border-radius: 5px;
   box-shadow: 0px 0px 3px 0px rgba(4, 54, 74, 0.74);
   overflow: hidden;
 `;
