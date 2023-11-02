@@ -1,47 +1,33 @@
 import {
-  StatisticsWrapper,
-  StatisticsSection,
-  ListTitle,
+  Container,
+  Section,
+  Title,
   List,
-  ListEl,
-  ElLabel,
-  ElPercentage,
-  PercentageIcon,
+  Item,
+  Label,
+  Percentage,
+  Icon,
 } from './Statistics.styled';
-
-const StatListTitle = ({ title }) => {
-  return <ListTitle>{title}</ListTitle>;
-};
-
-const StatListEl = ({ stats: { label, percentage } }) => {
-  return (
-    <ListEl>
-      <ElLabel>{label}</ElLabel>
-      <ElPercentage>
-        {percentage}
-        <PercentageIcon />
-      </ElPercentage>
-    </ListEl>
-  );
-};
-
-const StatList = ({ stats }) => {
-  return (
-    <List>
-      {stats.map(data => {
-        return <StatListEl key={data.id} stats={data} />;
-      })}
-    </List>
-  );
-};
 
 export const Statistics = ({ title, stats }) => {
   return (
-    <StatisticsWrapper>
-      <StatisticsSection>
-        <StatListTitle title={title} />
-        <StatList stats={stats} />
-      </StatisticsSection>
-    </StatisticsWrapper>
+    <Container>
+      <Section>
+        <Title>{title}</Title>
+        <List>
+          {stats.map(({ id, label, percentage }) => {
+            return (
+              <Item key={id}>
+                <Label>{label}</Label>
+                <Percentage>
+                  {percentage}
+                  <Icon />
+                </Percentage>
+              </Item>
+            );
+          })}
+        </List>
+      </Section>
+    </Container>
   );
 };

@@ -7,19 +7,19 @@ const getRandomHexColor = () => {
     .padStart(6, 0)}`;
 };
 
-export const StatisticsWrapper = styled.div`
+export const Container = styled.div`
   width: 300px;
   border-radius: 0 0 5px 5px;
   box-shadow: 0px 0px 3px 0px rgba(4, 54, 74, 0.74);
   overflow: hidden;
 `;
 
-export const StatisticsSection = styled.section`
+export const Section = styled.section`
   display: flex;
   flex-direction: column;
 `;
 
-export const ListTitle = styled.h2`
+export const Title = styled.h2`
   padding: 20px 0;
   font-size: 24px;
   font-weight: 700;
@@ -34,7 +34,7 @@ export const List = styled.ul`
   justify-content: space-between;
 `;
 
-export const ListEl = styled.li`
+export const Item = styled.li`
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -48,18 +48,18 @@ export const ListEl = styled.li`
   }
 `;
 
-export const ElLabel = styled.span`
+export const Label = styled.span`
   font-size: 14px;
   letter-spacing: 0.03em;
   color: ${p => p.theme.colors.coldMint};
 `;
 
-export const ElPercentage = styled.span`
+export const Percentage = styled.span`
   font-size: 15px;
   color: ${p => p.theme.colors.coldMint};
 `;
 
-export const PercentageIcon = styled(MdOutlinePercent)`
+export const Icon = styled(MdOutlinePercent)`
   fill: ${p => p.theme.colors.coldMint};
   vertical-align: bottom;
 `;

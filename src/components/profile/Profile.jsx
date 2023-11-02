@@ -1,51 +1,43 @@
 import {
-  ProfileContent,
-  ProfileDescr,
-  ProfileImg,
-  ProfileName,
-  ProfileTag,
-  TagAtIcon,
-  ProfileLocation,
-  StatsList,
-  ListItem,
-  ItemLabel,
-  ItemQuantity,
+  Content,
+  Descr,
+  Img,
+  Name,
+  Tag,
+  Icon,
+  Location,
+  List,
+  Item,
+  Label,
+  Quantity,
 } from './Profile.styled';
 
-export const Profile = ({
-  user: {
-    username,
-    tag,
-    location,
-    avatar,
-    stats: { followers, views, likes },
-  },
-}) => {
+export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
-    <ProfileContent>
-      <ProfileDescr>
-        <ProfileImg src={avatar} alt="User avatar" />
-        <ProfileName>{username}</ProfileName>
-        <ProfileTag>
-          <TagAtIcon />
+    <Content>
+      <Descr>
+        <Img src={avatar} alt="User avatar" />
+        <Name>{username}</Name>
+        <Tag>
+          <Icon />
           {tag}
-        </ProfileTag>
-        <ProfileLocation>{location}</ProfileLocation>
-      </ProfileDescr>
-      <StatsList>
-        <ListItem>
-          <ItemLabel>Followers</ItemLabel>
-          <ItemQuantity>{followers}</ItemQuantity>
-        </ListItem>
-        <ListItem>
-          <ItemLabel>Views</ItemLabel>
-          <ItemQuantity>{views}</ItemQuantity>
-        </ListItem>
-        <ListItem>
-          <ItemLabel>Likes</ItemLabel>
-          <ItemQuantity>{likes}</ItemQuantity>
-        </ListItem>
-      </StatsList>
-    </ProfileContent>
+        </Tag>
+        <Location>{location}</Location>
+      </Descr>
+      <List>
+        <Item>
+          <Label>Followers</Label>
+          <Quantity>{stats.followers}</Quantity>
+        </Item>
+        <Item>
+          <Label>Views</Label>
+          <Quantity>{stats.views}</Quantity>
+        </Item>
+        <Item>
+          <Label>Likes</Label>
+          <Quantity>{stats.likes}</Quantity>
+        </Item>
+      </List>
+    </Content>
   );
 };

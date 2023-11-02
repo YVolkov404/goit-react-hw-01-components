@@ -1,33 +1,21 @@
-import {
-  FriendListWrapper,
-  List,
-  ListItem,
-  ItemStatus,
-  ItemImg,
-  ItemText,
-  CircleIcon,
-} from './FriendList.styled';
-
-const FriendListItem = ({ friends: { avatar, name, isOnline } }) => {
-  return (
-    <ListItem>
-      <ItemStatus $isOnline={isOnline}>
-        {isOnline} <CircleIcon size="24px" />
-      </ItemStatus>
-      <ItemImg src={avatar} alt="User avatar" width="68" />
-      <ItemText>{name}</ItemText>
-    </ListItem>
-  );
-};
+import { FriendListItem } from './FriendListItem';
+import { Container, List } from './FriendList.styled';
 
 export const FriendList = ({ friends }) => {
   return (
-    <FriendListWrapper>
+    <Container>
       <List>
-        {friends.map(friend => {
-          return <FriendListItem key={friend.id} friends={friend} />;
+        {friends.map(({ id, avatar, name, isOnline }) => {
+          return (
+            <FriendListItem
+              key={id}
+              avatar={avatar}
+              name={name}
+              isOnline={isOnline}
+            />
+          );
         })}
       </List>
-    </FriendListWrapper>
+    </Container>
   );
 };

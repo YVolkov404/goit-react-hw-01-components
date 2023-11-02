@@ -13,7 +13,13 @@ export const App = () => {
   return (
     <AppContainer>
       <SubContainer>
-        <Profile user={user} />
+        <Profile
+          username={user.username}
+          tag={user.tag}
+          location={user.location}
+          avatar={user.avatar}
+          stats={user.stats}
+        />
         <Statistics title="Upload stats" stats={data} />
       </SubContainer>
       <FriendList friends={friends} />

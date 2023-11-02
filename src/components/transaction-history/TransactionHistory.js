@@ -1,52 +1,36 @@
 import {
-  TransactionHistoryContainer,
-  TableWrap,
-  TableBodyWrap,
-  TableHeadWrap,
-  TableHeader,
-  TableRow,
-  TableData,
+  Container,
+  Table,
+  Body,
+  Head,
+  Header,
+  Row,
+  Data,
 } from './TransactionHistory.styled';
-
-const TableHead = () => {
-  return (
-    <TableHeadWrap>
-      <TableRow>
-        <TableHeader>Type</TableHeader>
-        <TableHeader>Amount</TableHeader>
-        <TableHeader>Currency</TableHeader>
-      </TableRow>
-    </TableHeadWrap>
-  );
-};
-
-const TableRowItem = ({ items: { type, amount, currency } }) => {
-  return (
-    <TableRow>
-      <TableData>{type}</TableData>
-      <TableData>{amount}</TableData>
-      <TableData>{currency}</TableData>
-    </TableRow>
-  );
-};
-
-const TableBody = ({ items }) => {
-  return (
-    <TableBodyWrap>
-      {items.map(transaction => {
-        return <TableRowItem key={transaction.id} items={transaction} />;
-      })}
-    </TableBodyWrap>
-  );
-};
 
 export const TransactionHistory = ({ items }) => {
   return (
-    <TransactionHistoryContainer>
-      <TableWrap>
-        <TableHead />
-        <TableBody items={items} />
-      </TableWrap>
-    </TransactionHistoryContainer>
+    <Container>
+      <Table>
+        <Head>
+          <Row>
+            <Header>Type</Header>
+            <Header>Amount</Header>
+            <Header>Currency</Header>
+          </Row>
+        </Head>
+        <Body>
+          {items.map(({ id, type, amount, currency }) => {
+            return (
+              <Row key={id}>
+                <Data>{type}</Data>
+                <Data>{amount}</Data>
+                <Data>{currency}</Data>
+              </Row>
+            );
+          })}
+        </Body>
+      </Table>
+    </Container>
   );
 };

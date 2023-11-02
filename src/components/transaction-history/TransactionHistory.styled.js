@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-export const TransactionHistoryContainer = styled.div`
+export const Container = styled.div`
   width: 100%;
 `;
 
-export const TableWrap = styled.table`
+export const Table = styled.table`
   border-collapse: collapse;
   border-radius: 4px;
   width: 100%;
@@ -12,18 +12,18 @@ export const TableWrap = styled.table`
   overflow: hidden;
 `;
 
-export const TableBodyWrap = styled.tbody`
+export const Body = styled.tbody`
   font-size: 15px;
   text-align: center;
   text-transform: capitalize;
   letter-spacing: 0.03em;
 `;
 
-export const TableHeadWrap = styled.thead`
+export const Head = styled.thead`
   background-color: ${p => p.theme.colors.tealSea};
 `;
 
-export const TableHeader = styled.th`
+export const Header = styled.th`
   width: calc(100% / 3);
   font-size: 16px;
   font-weight: 400;
@@ -37,7 +37,7 @@ export const TableHeader = styled.th`
   }
 `;
 
-export const TableRow = styled.tr`
+export const Row = styled.tr`
   color: ${p => p.theme.colors.navyBlue};
   &:nth-child(2n) {
     color: ${p => p.theme.colors.tealSea};
@@ -45,7 +45,7 @@ export const TableRow = styled.tr`
   }
 `;
 
-export const TableData = styled.td`
+export const Data = styled.td`
   padding: 15px 0;
   border-right: 1px solid #64ccc5;
   &:last-child {
